@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+form input {
+    margin-bottom: 10px;
+}
+
+.common_color{
+    color:  #22AA15;
+}
