@@ -14,10 +14,10 @@ const Navbar = () => {
                     <li><NavLink to='/'>home</NavLink></li>
                     <li><NavLink to='/marathons'>marathons</NavLink></li>
                     <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                    <li><NavLink>home</NavLink></li>
+    
           </>
     return (
-        <div className="navbar bg-base-100 my-2.5 shadow-sm">
+        <div className="navbar bg-base-100 py-8 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,9 +53,9 @@ const Navbar = () => {
 
              {
                user && user.email ?  
-                <div className="flex gapx]">
-                      <img src={user?.photoURL} alt="" />
-                     <Link to='' onClick={logOut} className='btn  mx-1.5' >Log out</Link>
+                <div className="flex gap-x-1.5 items-center">
+                      <img src={user?.photoURL} className="w-[40px] rounded-full" alt="" />
+                     <Link to='' onClick={logOut} className='btn  mx-2.5' >Log out</Link>
                </div> 
                :
 
@@ -69,3 +69,5 @@ const Navbar = () => {
       </div>
     );
 };
+
+export default Navbar;

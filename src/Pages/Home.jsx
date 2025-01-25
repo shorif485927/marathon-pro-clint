@@ -1,4 +1,5 @@
 import Navbar from "../Common/Navbar";
+import Banner from "./Banner";
 
 const Home = () => {
     return (
@@ -9,6 +10,8 @@ const Home = () => {
 
 
                     <main>
+
+                          <Banner></Banner>
                          
                     </main>
 
