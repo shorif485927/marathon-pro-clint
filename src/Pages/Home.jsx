@@ -1,5 +1,6 @@
 import Navbar from "../Common/Navbar";
 import Banner from "./Banner";
+import UpCommingMarathonCards from "./UpCommingMarathonCards";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                     <main>
 
                           <Banner></Banner>
+                            <UpCommingMarathonCards></UpCommingMarathonCards>
                          
                     </main>
 

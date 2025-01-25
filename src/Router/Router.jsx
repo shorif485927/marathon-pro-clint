@@ -10,6 +10,7 @@ import Marathon from "../Pages/Marathon";
 import AddMarathon from "../Pages/AddMarathon";
 import MyMarathonList from "../Pages/MyMarathonList";
 import MyApplyList from "../Pages/MyApplyList";
+import MarathonCardDetails from "../Pages/MarathonCardDetails";
 
 
 
@@ -53,6 +54,11 @@ import MyApplyList from "../Pages/MyApplyList";
           path : '/marathons',
           element : <Marathon></Marathon>
         },
+        {
+          path : '/MarathonDetails/:id',
+          element  : <MarathonCardDetails></MarathonCardDetails>,
+          loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
+        }
 
         
       ]

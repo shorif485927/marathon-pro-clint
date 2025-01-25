@@ -9,13 +9,16 @@ form input {
 .common_color{
     color:  #22AA15;
 }
+.common_bg_color{
+    background-color:  #22AA15;
+}
 
 .banner_section img{
             width:  100%;
              height : 500px
 }
 
-.dashboard ul li a.active {
+.dashboard article ul li a.active {
     background-color: #22AA15;
      color : white ;
 }

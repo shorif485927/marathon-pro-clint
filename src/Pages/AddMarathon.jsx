@@ -1,14 +1,47 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+
+
+// https://ibb.co.com/kDFBbGX
+// https://ibb.co.com/wLq3ydx
+// https://ibb.co.com/QJqw3cG
+// https://ibb.co.com/ysX94hM
+// https://ibb.co.com/3cKHJhh
+// https://ibb.co.com/MG912mT
+
+
+
 
 const AddMarathon = () => {
+   const createdAt  = new Date().toLocaleDateString();
+  //  const registrationCount = 0;
+   const [totalRegistrartion , setTotalRegistration] = useState(0)
 
 
 // add submit form
-
   const handleAddMarathonForm  = e => {
     e.preventDefault();
 
-    
+    const formData = new FormData(e.target);
+    const newMarathonData = Object.fromEntries(formData.entries());
+
+     console.log(newMarathonData);
+
+     axios.post('http://localhost:5000/addMarathon',newMarathonData)
+     .then(res => {
+      console.log(res.data);
+        if(res.data.insertedId){
+           toast.success('Data submit succesfully')
+
+        }
+      
+     })
+    //  .catch(err => console.log(err)
+    //  )
+     
+
+
   }
 
     return (
@@ -23,7 +56,7 @@ const AddMarathon = () => {
       <label className="label">
         <span className="label-text text-gray-400 font-semibold text-xl ">Marathon Title</span>
       </label>
-      <input type="text" name='mtitle' placeholder=" Title" className="input input-bordered rounded-none" required />
+      <input type="text" name='title' placeholder=" Title" className="input input-bordered rounded-none" required />
             </div>
              
 
@@ -63,7 +96,7 @@ const AddMarathon = () => {
       <label className="label">
         <span className="label-text text-gray-400 font-semibold text-xl ">location</span>
       </label>
-      <input type="date" name='location' placeholder="Enter Location" className="input input-bordered rounded-none" required />
+      <input type="text" name='location' placeholder="Enter Location" className="input input-bordered rounded-none" required />
             </div>
 
 
@@ -106,13 +139,17 @@ const AddMarathon = () => {
 
                         {/* button */}
             <div className="form-control mt-6 grid grid-cols-2">
-         <button className=" bg-[#22AA15] text-white w-[170px] py-3  text-white font-bold uppercase tracking-widest ">submit</button>
+         <button type='submit' className=" bg-[#22AA15]  w-[170px] py-3  text-white font-bold uppercase tracking-widest ">submit</button>
     
                </div>
 
                             {/* button */}
 
             </form>
+             <div className='ml-37'>
+                   <h1 className='my-5'> date : {createdAt} </h1>
+                   <h1>  total registration : {totalRegistrartion} </h1>
+             </div>
             </div>
     );
 };
