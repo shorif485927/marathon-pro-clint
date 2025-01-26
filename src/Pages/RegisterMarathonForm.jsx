@@ -2,12 +2,16 @@ import React, { useContext } from 'react';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import AuthContext from '../Context/AuthContext';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const RegisterMarathonForm = () => {
 
               const {user} = useContext(AuthContext);
               const loadedData = useLoaderData();
+              const navigate = useNavigate();
+              const {setTotalRegistration} = useContext(AuthContext)
               const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
 
         
@@ -20,7 +24,20 @@ const RegisterMarathonForm = () => {
              const getMarathonRegisterFormData = Object.fromEntries(formData.entries())
 
 
+              axios.post('http://localhost:5000/marathonRegisterForm', getMarathonRegisterFormData)
+              .then(res => {
+                    const data = res.data;
+                    console.log(data);
 
+                    if(data.insertedId){
+                        toast.success('Register succesfully')
+                            // form.reset()
+                            setTotalRegistration((prevcount) => prevcount + 1)
+                        navigate('/dashboard');
+                    }
+                    
+              })
+              //  .catch(err => toast.error('something is wrong'))
               
            }
 

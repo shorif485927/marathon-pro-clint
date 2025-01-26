@@ -12,6 +12,7 @@ import MyMarathonList from "../Pages/MyMarathonList";
 import MyApplyList from "../Pages/MyApplyList";
 import MarathonCardDetails from "../Pages/MarathonCardDetails";
 import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
+import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
 
 
 
@@ -49,6 +50,7 @@ import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
               path : '/dashboard/myApplyList',
               element : <MyApplyList></MyApplyList>
              }
+       
           ]
         },
         {
@@ -64,7 +66,11 @@ import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
            path : '/registerMarathonForm/:id',
            element : <RegisterMarathonForm></RegisterMarathonForm>,
            loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
-        }
+        },
+        {
+          path : '/updateMyApplyData',
+          element : <UpdateMyApplyData></UpdateMyApplyData>
+         }
 
 
         

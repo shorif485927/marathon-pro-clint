@@ -12,7 +12,9 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
       console.log(user);
       
-    const [loading , setLoading] = useState(true)
+    const [loading , setLoading] = useState(true);
+
+    const [totalRegistration , setTotalRegistration] = useState(0)
 
     // new user
     const  newUser = (email,password) => {
@@ -67,7 +69,9 @@ loading,
 newUser,
 userLogIn,
 logOut,
-googleLogIn
+googleLogIn,
+totalRegistration,
+setTotalRegistration
 }
 
 

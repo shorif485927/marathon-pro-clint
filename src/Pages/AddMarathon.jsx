@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
+import AuthContext from '../Context/AuthContext';
 
 
 // https://ibb.co.com/kDFBbGX
@@ -16,7 +17,8 @@ import { toast } from 'react-toastify';
 const AddMarathon = () => {
    const createdAt  = new Date().toLocaleDateString();
   //  const registrationCount = 0;
-   const [totalRegistrartion , setTotalRegistration] = useState(0)
+  const {totalRegistration} =  useContext(AuthContext);
+   
 
 
 // add submit form
@@ -33,10 +35,11 @@ const AddMarathon = () => {
       console.log(res.data);
         if(res.data.insertedId){
            toast.success('Data submit succesfully')
-
+            form.reset
         }
       
      })
+    //  .catch(err => toast.error('something is wrong'))
     //  .catch(err => console.log(err)
     //  )
      
@@ -148,7 +151,7 @@ const AddMarathon = () => {
             </form>
              <div className='ml-37'>
                    <h1 className='my-5'> date : {createdAt} </h1>
-                   <h1>  total registration : {totalRegistrartion} </h1>
+                   <h1>  total registration : {totalRegistration} </h1>
              </div>
             </div>
     );
