@@ -44,7 +44,8 @@ import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
              },
              {
               path : '/dashboard/myMarathonList',
-              element : <MyMarathonList></MyMarathonList>
+              element : <MyMarathonList></MyMarathonList>,
+              loader : () => fetch('http://localhost:5000/addMarathon')
              },
              {
               path : '/dashboard/myApplyList',

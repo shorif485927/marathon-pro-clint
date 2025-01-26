@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import AuthContext from '../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 
 // https://ibb.co.com/kDFBbGX
@@ -18,6 +19,7 @@ const AddMarathon = () => {
    const createdAt  = new Date().toLocaleDateString();
   //  const registrationCount = 0;
   const {totalRegistration} =  useContext(AuthContext);
+  const navigate = useNavigate()
    
 
 
@@ -35,7 +37,7 @@ const AddMarathon = () => {
       console.log(res.data);
         if(res.data.insertedId){
            toast.success('Data submit succesfully')
-            form.reset
+            navigate('/')
         }
       
      })
@@ -108,8 +110,8 @@ const AddMarathon = () => {
       <label className="label">
         <span className="label-text text-gray-400 font-semibold text-xl ">Running Distance</span>
       </label>
-      <select defaultValue="Pick a Runtime" className="select select-success">
-  <option disabled={true}>Running Distance</option>
+      <select defaultValue="" className="select select-success" name='runnigDistance'>
+ 
   <option>25k</option>
   <option>15k</option>
   <option>3k</option>
