@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
+import AuthContext from '../Context/AuthContext';
+import { useLoaderData } from 'react-router-dom';
 
 const RegisterMarathonForm = () => {
+
+              const {user} = useContext(AuthContext);
+              const loadedData = useLoaderData();
+              const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
+
+        
+               
+
+           const handleMarathonRegisterForm = (e) =>{
+             e.preventDefault();
+
+             const formData = new FormData(e.target);
+             const getMarathonRegisterFormData = Object.fromEntries(formData.entries())
+
+
+
+              
+           }
+
+
     return (
         <div>
 
@@ -17,35 +39,36 @@ const RegisterMarathonForm = () => {
 
     <div className="  bg-base-100 py-14   shrink-0 shadow-2xl">
       <div className="w-[40%] mx-auto">
-        <fieldset className="">
+                <h1 className="text-center text-xl font-semibold common_color mb-3">Register form</h1>
+        <form className="" onSubmit={handleMarathonRegisterForm}>
             
           <label className="fieldset-label">Email</label>
-          <input   type="email" className="input w-full my-3" placeholder="Email" />
+          <input   type="email" className="input w-full my-3" name='email' value={user?.email} placeholder="Email" />
 
           <label className="fieldset-label">Title</label>
-          <input   type="email" className="input w-full my-3" placeholder="Email" />
+          <input   type="text" className="input w-full my-3"  name='title' value={title} placeholder="" />
 
 
           <label className="fieldset-label">Marathon Start</label>
-          <input   type="email" className="input w-full my-3" placeholder="Email" />
+          <input   type="text" className="input w-full my-3" name='marathonStart' value={marathonStart} placeholder="" />
 
 
           <label className="fieldset-label">First name</label>
-          <input   type="email" className="input w-full my-3" placeholder="Email" />
+          <input   type="text" className="input w-full my-3" name='LastName' placeholder="Ener your first name" />
 
           <label className="fieldset-label">last name</label>
-          <input  type="email" className="input w-full" placeholder="Email" />
+          <input  type="text" className="input w-full my-3" name='lastName' placeholder="enter your last name" />
 
 
           <label className="fieldset-label">contact number</label>
-          <input  type="email" className="input w-full" placeholder="Email" />
+          <input  type="number" className="input w-full my-3" name='contactNumber' placeholder="enter contact number" />
 
           <label className="fieldset-label">Addition Info</label>
-          <textarea  type="email" className="input w-full" placeholder="Email" />
+          <textarea  type="text" className="input w-full my-3" name='additionlInfo' placeholder="" />
  
  
-          <button className="btn btn-neutral mt-4">Login</button>
-        </fieldset>
+          <button className="btn btn-neutral mt-4 common_bg_color text-white">Register</button>
+        </form>
       </div>
     </div>
   </div>

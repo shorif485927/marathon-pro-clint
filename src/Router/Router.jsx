@@ -61,8 +61,9 @@ import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
           loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
         },
         {
-           path : '/registerMarathonForm',
-           element : <RegisterMarathonForm></RegisterMarathonForm>
+           path : '/registerMarathonForm/:id',
+           element : <RegisterMarathonForm></RegisterMarathonForm>,
+           loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
         }
 
 

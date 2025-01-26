@@ -7,7 +7,7 @@ import img1 from '../../public/image/marathon_1.jpg'
 const MarathonCardDetails = () => {
        const loadedMarathonCardData = useLoaderData();
         console.log(loadedMarathonCardData);
-        const {title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedMarathonCardData
+        const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedMarathonCardData
 
         
     return (
@@ -36,7 +36,7 @@ const MarathonCardDetails = () => {
                           <p> Marathon Starts : <span className='text-gray-600'>{marathonStart}</span> </p>
                           </div>
 
-      <Link to='/registerMarathonForm' className="btn common_bg_color text-white my-5 ">Register</Link>
+      <Link to={`/registerMarathonForm/${_id}`} className="btn common_bg_color text-white my-5 ">Register</Link>
     </div>
   </div>
 </div>
