@@ -71,7 +71,7 @@ const RegisterMarathonForm = () => {
 
 
           <label className="fieldset-label">First name</label>
-          <input   type="text" className="input w-full my-3" name='LastName' placeholder="Ener your first name" />
+          <input   type="text" className="input w-full my-3" name='firstName' placeholder="Ener your first name" />
 
           <label className="fieldset-label">last name</label>
           <input  type="text" className="input w-full my-3" name='lastName' placeholder="enter your last name" />

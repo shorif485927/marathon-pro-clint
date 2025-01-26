@@ -68,8 +68,9 @@ import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
            loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
         },
         {
-          path : '/updateMyApplyData',
-          element : <UpdateMyApplyData></UpdateMyApplyData>
+          path : '/updateMyApplyData/:id',
+          element : <UpdateMyApplyData></UpdateMyApplyData>,
+           loader : ({params}) => fetch(`http://localhost:5000/marathonRegisterForm/${params.id}`)
          }
 
 
