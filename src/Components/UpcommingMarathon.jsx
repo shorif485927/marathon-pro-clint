@@ -27,7 +27,7 @@ const UpcommingMarathon = () => {
 
                   <main  className='w-[85%] mx-auto  my-12' >
                     
-                      <div  className='grid grid-cols-3 gap-20 '>
+                      <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 '>
 
                         {
                             upCommingMarathonData.map(d => 

@@ -18,7 +18,7 @@ const OurCoach = () => {
                   </div> 
 
                   <main  className='w-[85%] mx-auto  mb-14'>
-                            <div className='grid grid-cols-4  gap-12'>
+                            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-12'>
                                  {
                                     coach.map(d => 
                                         <div className="card bg-base-100 w-full shadow-sm">

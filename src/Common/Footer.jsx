@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
             <footer className=" bg-neutral text-neutral-content p-10">
  
-              <div className='footer  grid grid-cols-3 justify-center  '>
+              <div className='footer  grid grid-cols-1 justify-center  '>
               <nav className=''>
     <h6 className="footer-title text-2xl uppercase">  
       <span className='common_color'>marathon</span>
@@ -21,7 +21,7 @@ const Footer = () => {
 </p>
  
   </nav>
-  <nav className='px-15'>
+  <nav className='md:px-15'>
     <h6 className="footer-title">Quick Links</h6>
     <a className="link link-hover text-[18px]">About us</a>
     <a className="link link-hover text-[18px]">Home</a>
@@ -50,7 +50,7 @@ const Footer = () => {
 
 <div className='  '>
         <hr />
-<aside className='w-[50%] mx-auto'>
+<aside className='md:w-[50%] mx-auto'>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
   </aside>
     </div>

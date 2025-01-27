@@ -41,7 +41,7 @@ const Navbar = () => {
                     {links}
             </ul>
           </div>
-          <p className="btn btn-ghost text-xl common_color">MARATHON <span>PRO</span> </p>
+          <p className="btn btn-ghost text-xl common_color hidden md:block">MARATHON <span>PRO</span> </p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -54,12 +54,12 @@ const Navbar = () => {
              {
                user && user.email ?  
                 <div className="flex gap-x-1.5 items-center">
-                      <img src={user?.photoURL} className="w-[40px] rounded-full" alt="" />
+                      <img src={user?.photoURL} className="w-[40px] rounded-full hidden md:block" alt="" />
                      <Link to='' onClick={logOut} className='btn  mx-2.5' >Log out</Link>
                </div> 
                :
 
-                 <div>
+                 <div className="flex mr-4">
                              <Link to='/register' className='btn  mx-1.5' >Register</Link>
                              <Link to='/login' className='btn' >Log in</Link>
                  </div>
