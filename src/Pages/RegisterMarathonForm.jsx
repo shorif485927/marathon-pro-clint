@@ -50,14 +50,14 @@ const RegisterMarathonForm = () => {
             <header  className='w-[85%] mx-auto'>
                  <Navbar></Navbar>
             </header >
-            <main className='w-[85%] mx-auto'>
+            <main className='md:w-[85%] mx-auto my-8'>
                         {/*   marathon registration form  */}
 
                         <div className=" bg-base-200 ">
   <div className=" ">
 
     <div className="  bg-base-100 py-14   shrink-0 shadow-2xl">
-      <div className="w-[40%] mx-auto">
+      <div className="sm:w-[60%] lg:w-[40%] mx-auto px-8">
                 <h1 className="text-center text-xl font-semibold common_color mb-3">Register form</h1>
         <form className="" onSubmit={handleMarathonRegisterForm}>
             

@@ -23,7 +23,7 @@ const Marathon = () => {
                   <Navbar></Navbar>
               </header>
               <main className=' min-h-screen w-[85%] mx-auto my-14 '>
-                    <div className='grid grid-cols-3 gap-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                          {
                             marathonCard.map(card => 
                                     // marathon card start

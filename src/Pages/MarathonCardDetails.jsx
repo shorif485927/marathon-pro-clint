@@ -45,12 +45,12 @@ const MarathonCardDetails = () => {
 
        <main  className='w-[85%] mx-auto'>
        <div className=" bg-base-200 py-14">
-  <div className=" flex justify-around ">
+  <div className=" block md:flex justify-around gap-x-8">
     <img
       src={photourl}
-      className="max-w-md rounded-lg shadow-2xl" />
+      className=" w-full max-w-sm lg:max-w-md rounded-lg shadow-2xl" />
     <div>
-      <h1 className="text-5xl font-bold">{title} </h1>
+      <h1 className=" text-3xl mt-4  md:text-5xl font-bold">{title} </h1>
       <p className="py-6">
                 {description}
       </p>
