@@ -47,15 +47,15 @@ const UpdateMyMarathon = () => {
             <header>
                   <Navbar></Navbar>
             </header>
-            <main className='w-[85%] mx-auto'>
+            <main className='md:w-[85%] mx-auto'>
                         {/*   marathon registration form  */}
 
                         <div className=" bg-base-200 ">
   <div className=" ">
 
-    <div className="  bg-base-100 py-14   shrink-0 shadow-2xl">
-      <div className="w-[40%] mx-auto">
-                <h1 className="text-center text-xl font-semibold common_color mb-3">Update form</h1>
+    <div className="  bg-base-100 py-14    shrink-0 shadow-2xl">
+      <div className=" w-full md:w-[70%] lg:w-[40%] mx-auto px-8">
+                <h1 className="text-center text-xl font-semibold common_color mb-3">Update Your Marathon Data</h1>
         <form className="" onSubmit={updateMyMarathonForm}>
 
           <label className="fieldset-label">Title</label>

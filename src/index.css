@@ -27,3 +27,12 @@ footer hr {
     border : 1px solid #1D2939;
     margin : 20px 0;
 }
+.add_marathon_data input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+
+}
+.add_marathon_data label {
+    display : block;
+}

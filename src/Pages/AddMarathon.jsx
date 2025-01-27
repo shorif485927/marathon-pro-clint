@@ -43,11 +43,11 @@ const AddMarathon = () => {
   }
 
     return (
-            <div className=''>
+            <div className='add_marathon_data'>
       
 
 {/* grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-3 shadow-2xl p-8 w-11/12 md:w-4/8 */}
-<form className=' w-[70%] mx-auto grid grid-cols-2' onSubmit={handleAddMarathonForm} >
+<form className=' md:w-[70%] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 px-3' onSubmit={handleAddMarathonForm} >
                     
                     {/* input field */}
             <div className="">
@@ -144,7 +144,7 @@ const AddMarathon = () => {
                             {/* button */}
 
             </form>
-             <div className='ml-37'>
+             <div className='ml-3 md:ml-37 capitalize font-semibold'>
                    <h1 className='my-5'> date : {createdAt} </h1>
                    <h1>  total registration : {totalRegistration} </h1>
              </div>

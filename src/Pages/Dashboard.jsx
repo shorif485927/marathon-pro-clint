@@ -13,8 +13,8 @@ const Dashboard = () => {
 
 
 
-           <article className='w-[90%] mx-auto flex gap-x-8 my-10'>
-              <aside>
+           <article className='w-[90%] mx-auto block sm:flex gap-x-8 my-10'>
+              <aside className='mb-14'>
                  <div className="dashboard_route_links">
                        <ul>
                         <li> <NavLink className='btn w-[200px] my-1' to='/dashboard/addmarathon'>Add Marathon</NavLink> </li>
