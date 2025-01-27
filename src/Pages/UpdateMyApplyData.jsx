@@ -28,7 +28,7 @@ const UpdateMyApplyData = () => {
                   console.log(res.data);
                   if(res.data.modifiedCount > 0){
                       toast.success('data updated succesfully')
-                      navigate('/dashboard')
+                      navigate('/dashboard/myApplyList')
                   }
                   
             })

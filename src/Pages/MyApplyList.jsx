@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import axios from 'axios';
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import AuthContext from '../Context/AuthContext';
 
 const MyApplyList = () => {
+    const {user} = useContext(AuthContext)
     const [myApplyData , setMyApplyData] = useState([])
 
     //   console.log(myApplyData);
@@ -14,7 +16,9 @@ const MyApplyList = () => {
 useEffect(() => {
                     axios('http://localhost:5000/marathonRegisterForm')
                     .then(res => {
-                                setMyApplyData(res.data)
+                             const  data = res.data;
+                             const filterdData = data.filter(d => d.email == user.email);
+                             setMyApplyData(filterdData)
                     })
           },[])
 

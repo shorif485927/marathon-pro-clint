@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const UpCommingMarathonCards = () => {
+const OurMarathon = () => {
 
      const [marathonsCard , setMarathonCards] = useState([])
      console.log(marathonsCard);
      
-     const {title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = marathonsCard
+     const {title,registrationStart,registrationEnd , marathonStart , location , description , photourl,RegistrationData}  = marathonsCard
 
 
      useEffect(() => {
@@ -26,7 +26,14 @@ const UpCommingMarathonCards = () => {
 
 
     return (
-        <div className='w-[85%] mx-auto grid grid-cols-3 gap-14 my-12'>
+                <div>
+
+<div className="heading my-14">
+                    <h1 className='text-3xl text-center font-bold'>Our Marathon</h1>
+                  </div> 
+<div className='w-[85%] mx-auto grid grid-cols-3 gap-14 my-12'>
+
+
            {
             marathonsCard.map(card => 
 
@@ -37,9 +44,12 @@ const UpCommingMarathonCards = () => {
   </figure>
   <div className="card-body">
     <h2 className="card-title"> {card.title}</h2>
-      <p> {card.description} </p>
+                <div className='capitalize text-md'>
+                <p> location : {card.location} </p>
+                <p> marathon start: {card.marathonStart} </p>
+                </div>
     <div className="card-actions justify-end">
-      <Link to={`/MarathonDetails/${card?._id}`} className="btn btn-primary">See More</Link>
+      <Link to={`/MarathonDetails/${card?._id}`} className="btn common_bg_color text-white">See Details</Link>
     </div>
   </div>
 </div>
@@ -48,7 +58,9 @@ const UpCommingMarathonCards = () => {
             )
            }
         </div>
+
+                </div>
     );
 };
 
-export default UpCommingMarathonCards;
+export default OurMarathon;

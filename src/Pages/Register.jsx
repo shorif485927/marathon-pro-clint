@@ -67,16 +67,6 @@ const Register = () => {
          }
          )
  
- 
-
-
-
-
-
-
-        
-
-
     }
 
 
@@ -107,10 +97,7 @@ const Register = () => {
                 <button  onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-3 top-7'> {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>} </button>
                </div>
 
-                
 
-
-                
                 <div className='my-2'>
                   {
                      

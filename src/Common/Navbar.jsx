@@ -13,7 +13,7 @@ const Navbar = () => {
 
                     <li><NavLink to='/'>home</NavLink></li>
                     <li><NavLink to='/marathons'>marathons</NavLink></li>
-                    <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                    <li><NavLink className={user ? 'block' : 'hidden'} to='/dashboard'>Dashboard</NavLink></li>
     
           </>
     return (

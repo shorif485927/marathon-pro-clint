@@ -1,6 +1,8 @@
 import Navbar from "../Common/Navbar";
-import Banner from "./Banner";
-import UpCommingMarathonCards from "./UpCommingMarathonCards";
+import AboutUs from "../Components/AboutUs";
+import Banner from "../Components/Banner";
+import OurMarathon from "../Components/OurMarathon";
+import UpcommingMarathon from "../Components/UpcommingMarathon";
 
 const Home = () => {
     return (
@@ -13,8 +15,9 @@ const Home = () => {
                     <main>
 
                           <Banner></Banner>
-                            <UpCommingMarathonCards></UpCommingMarathonCards>
-                         
+                            <AboutUs></AboutUs>
+                            <OurMarathon></OurMarathon>
+                          <UpcommingMarathon></UpcommingMarathon>
                     </main>
 
 

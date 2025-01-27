@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AuthContext from '../Context/AuthContext';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import Loading from '../Pages/Loading';
 
 const PrivateRoute = ({children}) => {
@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
 
  
              if(user) {
-                 return children
+                 return children;
              }
 
              if(loading){
@@ -21,6 +21,6 @@ const PrivateRoute = ({children}) => {
 
 
 
-};
+}
 
 export default PrivateRoute;

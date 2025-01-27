@@ -5,19 +5,10 @@ import AuthContext from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 
-// https://ibb.co.com/kDFBbGX
-// https://ibb.co.com/wLq3ydx
-// https://ibb.co.com/QJqw3cG
-// https://ibb.co.com/ysX94hM
-// https://ibb.co.com/3cKHJhh
-// https://ibb.co.com/MG912mT
-
-
-
 
 const AddMarathon = () => {
+  const {user} = useContext(AuthContext)
    const createdAt  = new Date().toLocaleDateString();
-  //  const registrationCount = 0;
   const {totalRegistration} =  useContext(AuthContext);
   const navigate = useNavigate()
    
@@ -29,6 +20,8 @@ const AddMarathon = () => {
 
     const formData = new FormData(e.target);
     const newMarathonData = Object.fromEntries(formData.entries());
+    newMarathonData.Email = user.email;
+    newMarathonData.RegistrationDate = createdAt
 
      console.log(newMarathonData);
 

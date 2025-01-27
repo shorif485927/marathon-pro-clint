@@ -9,9 +9,11 @@ import { toast } from 'react-toastify';
 const RegisterMarathonForm = () => {
 
               const {user} = useContext(AuthContext);
-              const loadedData = useLoaderData();
               const navigate = useNavigate();
               const {setTotalRegistration} = useContext(AuthContext)
+              const loadedData = useLoaderData();
+              console.log(loadedData);
+              
               const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
 
         

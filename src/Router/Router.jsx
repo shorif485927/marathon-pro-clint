@@ -13,6 +13,8 @@ import MyApplyList from "../Pages/MyApplyList";
 import MarathonCardDetails from "../Pages/MarathonCardDetails";
 import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
 import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
+import UpdateMyMarathon from "../Pages/UpdateMyMarathon";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -40,16 +42,22 @@ import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
           children : [
              {
               path : '/dashboard/addmarathon',
-              element : <AddMarathon></AddMarathon>
+              element :   <PrivateRoute>
+                <AddMarathon></AddMarathon>
+              </PrivateRoute>
              },
              {
               path : '/dashboard/myMarathonList',
-              element : <MyMarathonList></MyMarathonList>,
-              loader : () => fetch('http://localhost:5000/addMarathon')
+              element :  <PrivateRoute>
+                <MyMarathonList></MyMarathonList>
+              </PrivateRoute>,
+       
              },
              {
               path : '/dashboard/myApplyList',
-              element : <MyApplyList></MyApplyList>
+              element :  <PrivateRoute>
+                 <MyApplyList></MyApplyList>
+              </PrivateRoute>
              }
        
           ]
@@ -60,7 +68,9 @@ import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
         },
         {
           path : '/MarathonDetails/:id',
-          element  : <MarathonCardDetails></MarathonCardDetails>,
+          element  :  <PrivateRoute>
+            <MarathonCardDetails></MarathonCardDetails>
+          </PrivateRoute> ,
           loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
         },
         {
@@ -72,7 +82,12 @@ import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
           path : '/updateMyApplyData/:id',
           element : <UpdateMyApplyData></UpdateMyApplyData>,
            loader : ({params}) => fetch(`http://localhost:5000/marathonRegisterForm/${params.id}`)
-         }
+         },
+          {
+            path : '/updateMyMarathon/:id',
+            element : <UpdateMyMarathon></UpdateMyMarathon>,
+            loader : ({params}) =>fetch(`http://localhost:5000/addMarathon/${params.id}`)
+          }
 
 
         

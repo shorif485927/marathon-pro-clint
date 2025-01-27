@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 // images
 
  import img1 from '../../public/image/marathon_1.jpg'
- import img2 from '../../public/image/marathon_2.webp'
+ import img2 from '../../public/image/marathon_2.jpg'
  import img3 from '../../public/image/marathon_3.jpg'
 
 const Banner = () => {
@@ -30,22 +30,37 @@ const Banner = () => {
 
     >
       <SwiperSlide>  
-            <div className="flex justify-center items-center">
+            <div className="flex   relative items-center">
                        <img src={img1} className='w-full h-[400px]'  alt="" />
 
+                       <div className="banner_cnt absolute ml-20 ">
+                          <h1 className='text-5xl font-extrabold  common_color'>Step Into Speed Stride </h1>
+                          <h1  className='text-5xl font-extrabold  common_color mt-2'>Towards Success</h1>
+                       </div>
+
             </div>
            </SwiperSlide>
+
 
       <SwiperSlide>  
-            <div className="flex justify-center items-center">
+            <div className="flex  items-center relative">
                        <img src={img2}  className='w-full h-[400px]' alt="" />
+                       <div className="banner_cnt absolute ml-20 ">
+                          <h1 className='text-5xl font-extrabold  common_color'> Inspiring Runners and </h1>
+                          <h1  className='text-5xl font-extrabold  common_color mt-2'>   Creating Connections</h1>
+                       </div>
 
             </div>
            </SwiperSlide>
 
-           <SwiperSlide>  
-            <div className="flex justify-center items-center">
+           <SwiperSlide>   
+            <div className="flex  items-center">
                        <img src={img3}  className='w-full h-[400px]' alt="" />
+
+                       <div className="banner_cnt absolute ml-20 ">
+                          <h1 className='text-5xl font-extrabold  common_color'>Programs That Turn Goals </h1>
+                          <h1  className='text-5xl font-extrabold  common_color mt-4'>into Achievements</h1>
+                       </div>
 
             </div>
            </SwiperSlide>
