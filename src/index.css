@@ -22,3 +22,8 @@ form input {
     background-color: #22AA15;
      color : white ;
 }
+
+footer hr {
+    border : 1px solid #1D2939;
+    margin : 20px 0;
+}

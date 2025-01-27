@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
@@ -6,9 +6,25 @@ import Footer from '../Common/Footer';
 
 const MarathonCardDetails = () => {
        const loadedMarathonCardData = useLoaderData();
-        console.log(loadedMarathonCardData);
-        // const {id} = useParams()
-        const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl,runnigDistance}  = loadedMarathonCardData
+      
+
+        const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl,runnigDistance}  = loadedMarathonCardData;
+
+        // const [currentDate, setCurrentDate] = useState(new Date());
+        // const [campaignDeadline, setDedline] = useState(new Date(Deadline))
+        const [dedline, setDedline] = useState(true)
+        console.log(dedline);
+        
+        const [currentDate, setCurrentDate] = useState(new Date())
+        const [marathonDedline , setMarathonDedline] = useState(new Date(registrationEnd));
+       
+                 useEffect(() => {
+                  if(currentDate > marathonDedline){
+                    setDedline(false)
+              }else{
+                setDedline(true)
+              }
+                 },[])
 
         
     return (
@@ -38,7 +54,7 @@ const MarathonCardDetails = () => {
                           <p> Running Distance : <span className='text-gray-600'>{runnigDistance}</span> </p>
                           </div>
 
-      <Link to={`/registerMarathonForm/${_id}`} className="btn common_bg_color text-white my-5 ">Register</Link>
+      <Link to={`/registerMarathonForm/${_id}`} className={!dedline ? 'btn disabled' : 'btn common_bg_color text-white my-5'}>Register</Link>
     </div>
   </div>
 </div>
