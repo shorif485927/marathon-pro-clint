@@ -17,7 +17,7 @@ const OurCoach = () => {
                     <h1 className='text-3xl text-center font-bold'>Our Coaches</h1>
                   </div> 
 
-                  <main  className='w-[85%] mx-auto'>
+                  <main  className='w-[85%] mx-auto  mb-14'>
                             <div className='grid grid-cols-4  gap-12'>
                                  {
                                     coach.map(d => 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
+import { toast } from 'react-toastify';
 
 
 const MarathonCardDetails = () => {
@@ -25,6 +26,14 @@ const MarathonCardDetails = () => {
                 setDedline(true)
               }
                  },[])
+
+                 
+                 const handleDesabledbutton = () => {
+                        if(!dedline){
+                          toast.error('Dedline is over ')
+                          return;
+                        }
+                 }
 
         
     return (
@@ -54,7 +63,14 @@ const MarathonCardDetails = () => {
                           <p> Running Distance : <span className='text-gray-600'>{runnigDistance}</span> </p>
                           </div>
 
-      <Link to={`/registerMarathonForm/${_id}`} className={!dedline ? 'btn disabled' : 'btn common_bg_color text-white my-5'}>Register</Link>
+                   <div>
+                      {
+                        !dedline ? <div className="btn my-5 bg-gray-700 text-white" onClick={handleDesabledbutton}>Register</div> :
+
+                        <Link to={`/registerMarathonForm/${_id}`} className='btn common_bg_color text-white my-5'>Register</Link>
+                      }
+                   </div>
+
     </div>
   </div>
 </div>
