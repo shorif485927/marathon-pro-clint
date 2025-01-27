@@ -1,0 +1,57 @@
+[
+    {
+      "title": "Mountain Trail Challenge",
+      "startDate": "2025-09-15",
+      "registrationDates": "Aug 1 - Aug 31, 2025",
+      "location": "Rocky Mountains, Colorado",
+      "distance": "25k",
+      "description": "Take on the rugged trails of the Rockies in this scenic and challenging run.",
+      "image": "https://i.ibb.co.com/P4cFRGZ/upc-1.jpg"
+    },
+    {
+      "title": "Urban Dash Marathon",
+      "startDate": "2025-10-05",
+      "registrationDates": "Sep 1 - Sep 20, 2025",
+      "location": "Downtown Chicago, Illinois",
+      "distance": "10k",
+      "description": "Run through the iconic streets and landmarks of downtown Chicago.",
+      "image": "https://i.ibb.co.com/9gyCfSw/upc-2.jpg"
+    },
+    {
+      "title": "Forest Escape Run",
+      "startDate": "2025-11-20",
+      "registrationDates": "Oct 15 - Nov 10, 2025",
+      "location": "Redwood National Park, California",
+      "distance": "3k",
+      "description": "Experience a short but breathtaking run through towering redwood trees.",
+      "image": "https://i.ibb.co.com/7nWhZX5/upc-3.jpg"
+    },
+    {
+      "title": "Beachfront Fun Run",
+      "startDate": "2025-12-12",
+      "registrationDates": "Nov 1 - Nov 30, 2025",
+      "location": "Miami Beach, Florida",
+      "distance": "10k",
+      "description": "Enjoy the sun, sand, and surf in this lively beachfront run.",
+      "image": "https://i.ibb.co.com/mDRmp8D/upc4.jpg"
+    },
+    {
+      "title": "Winter Wonderland Marathon",
+      "startDate": "2026-01-10",
+      "registrationDates": "Dec 1 - Dec 20, 2025",
+      "location": "Banff National Park, Canada",
+      "distance": "25k",
+      "description": "Embrace the beauty of snow-covered landscapes in this magical winter run.",
+      "image": "winter-wonderland-marathon.jpg"
+    },
+    {
+      "title": "Historic City Run",
+      "startDate": "2026-02-25",
+      "registrationDates": "Jan 10 - Feb 10, 2026",
+      "location": "Rome, Italy",
+      "distance": "10k",
+      "description": "Run through the streets of Rome and immerse yourself in history and culture.",
+      "image": "historic-city-run.jpg"
+    }
+  ]
+  
