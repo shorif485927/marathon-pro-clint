@@ -13,11 +13,11 @@ const Dashboard = () => {
 
 
 
-           <article className='w-[90%] mx-auto block sm:flex gap-x-8 my-10'>
+           <article className='w-[90%] mx-auto block sm:flex gap-x-8 my-20'>
               <aside className='mb-14'>
                  <div className="dashboard_route_links">
                        <ul>
-                        <li> <NavLink className='btn w-[200px] my-1' to='/dashboard/addmarathon'>Add Marathon</NavLink> </li>
+                        <li> <NavLink className='btn w-[200px] my-1' to='/dashboard'>Add Marathon</NavLink> </li>
                         <li> <NavLink className='btn w-[200px] my-1' to='/dashboard/myMarathonList'>My Marathon List</NavLink> </li>
                         <li> <NavLink className='btn w-[200px] my-1' to='/dashboard/myApplyList'>My Apply List</NavLink> </li>
                  

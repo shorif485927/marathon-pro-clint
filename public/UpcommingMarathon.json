@@ -42,7 +42,7 @@
       "location": "Banff National Park, Canada",
       "distance": "25k",
       "description": "Embrace the beauty of snow-covered landscapes in this magical winter run.",
-      "image": "winter-wonderland-marathon.jpg"
+      "image": "https://i.ibb.co.com/CzYf87F/upc-6.jpg"
     },
     {
       "title": "Historic City Run",
@@ -51,7 +51,8 @@
       "location": "Rome, Italy",
       "distance": "10k",
       "description": "Run through the streets of Rome and immerse yourself in history and culture.",
-      "image": "historic-city-run.jpg"
+      "image": "  https://i.ibb.co.com/nB9Ls8m/upc-5.jpg"
     }
   ]
   
+

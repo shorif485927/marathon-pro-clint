@@ -41,7 +41,7 @@ import PrivateRoute from "./PrivateRoute";
           element : <Dashboard></Dashboard>,
           children : [
              {
-              path : '/dashboard/addmarathon',
+              path : '/dashboard',
               element :   <PrivateRoute>
                 <AddMarathon></AddMarathon>
               </PrivateRoute>

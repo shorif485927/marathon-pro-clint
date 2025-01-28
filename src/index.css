@@ -36,3 +36,13 @@ footer hr {
 .add_marathon_data label {
     display : block;
 }
+.navbar a.active {
+    background-color: #22AA15;
+    color:  white;
+
+}
+.navbar a {
+     font-size : 16px;
+    margin-left: 20px;
+    text-transform: capitalize;
+}

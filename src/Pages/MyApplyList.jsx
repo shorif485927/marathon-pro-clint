@@ -14,7 +14,7 @@ const MyApplyList = () => {
     //   console.log(myApplyData);
     //   const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
 useEffect(() => {
-                    axios('http://localhost:5000/marathonRegisterForm')
+                    axios.get('http://localhost:5000/marathonRegisterForm',{withCredentials : true})
                     .then(res => {
                              const  data = res.data;
                              const filterdData = data.filter(d => d.email == user.email);
@@ -65,8 +65,10 @@ useEffect(() => {
 
     return (
         <div>
-                       <main>
-
+                       <main className='relative'>
+                                  <div className="search absolute  right-0 -top-10 ">
+                                  <input type="text" placeholder="Search by title" className="input" />
+                                  </div>
                        <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -101,7 +103,7 @@ useEffect(() => {
       
     </tbody>
   </table>
-</div>
+                        </div>
 
                        </main>
         </div>

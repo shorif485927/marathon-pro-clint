@@ -44,7 +44,7 @@ const UpdateMyApplyData = () => {
              <header>
                 <Navbar></Navbar>
              </header>
-             <main className='md:w-[85%] mx-auto'>
+             <main className='md:w-[85%] mx-auto  my-20'>
                         {/*   marathon registration form  */}
 
                         <div className=" bg-base-200 ">

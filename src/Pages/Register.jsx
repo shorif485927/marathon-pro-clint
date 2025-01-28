@@ -108,7 +108,7 @@ const Register = () => {
                 <button className="btn btn-neutral mt-4">register</button>
               </form>
                                 <div>
-                                   <p>if you have an alreay accout? please <Link  to='/login'>Log in </Link></p>
+                                   <p>if you have an alreay accout? please <Link className='common_color' to='/login'>Log in </Link></p>
                                 </div>
             </div>
           </div>
