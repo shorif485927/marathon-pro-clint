@@ -1,8 +1,23 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MARATHON-PRO
 
-Currently, two official plugins are available:
+MarathonPro is an innovative platform that bridges the gap between event organizers and participants, making marathon management effortless
+### projet live link
+<a href="https://marathon-pro-e98da.web.app">click here</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features
+1. single pase application
+2. firebase  authentication system
+3. Private Routing system
+4. using noSQL mongodb database
+5. jwt authentication system
+6. responsive for all devices
+
+### npm packages
+1. react tostify
+2. sweet alert 2
+3. react-countDown-circle-timer
+4. react icons
+
+
+
