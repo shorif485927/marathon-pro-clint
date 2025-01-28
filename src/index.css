@@ -46,3 +46,20 @@ footer hr {
     margin-left: 20px;
     text-transform: capitalize;
 }
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .timer-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .timer-value {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }

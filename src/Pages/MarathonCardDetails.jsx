@@ -3,19 +3,20 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import { toast } from 'react-toastify';
+import CountDownCircle from '../Components/CountDownCircle';
 
 
 const MarathonCardDetails = () => {
        const loadedMarathonCardData = useLoaderData();
       
-
-        const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl,runnigDistance}  = loadedMarathonCardData;
+       const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl,runnigDistance}  = loadedMarathonCardData;
+          
+       const marathonStartDate =  marathonStart
 
         // const [currentDate, setCurrentDate] = useState(new Date());
         // const [campaignDeadline, setDedline] = useState(new Date(Deadline))
         const [dedline, setDedline] = useState(true)
-        console.log(dedline);
-        
+    
         const [currentDate, setCurrentDate] = useState(new Date())
         const [marathonDedline , setMarathonDedline] = useState(new Date(registrationEnd));
        
@@ -70,6 +71,10 @@ const MarathonCardDetails = () => {
                         <Link to={`/registerMarathonForm/${_id}`} className='btn common_bg_color text-white my-5'>Register</Link>
                       }
                    </div>
+
+                          <div>
+                              <CountDownCircle marathonStartDate={marathonStartDate} ></CountDownCircle>
+                          </div>
 
     </div>
   </div>
