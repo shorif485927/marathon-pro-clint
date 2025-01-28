@@ -25,7 +25,7 @@ const AddMarathon = () => {
 
 
 
-     axios.post('http://localhost:5000/addMarathon',newMarathonData)
+     axios.post('https://marathon-pro-server.vercel.app/addMarathon',newMarathonData)
      .then(res => {
    
         if(res.data.insertedId){

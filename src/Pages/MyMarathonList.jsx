@@ -18,7 +18,7 @@ const MyMarathonList = () => {
              
 
                    useEffect(()=>{
-                       axios('http://localhost:5000/addMarathon')
+                       axios('https://marathon-pro-server.vercel.app/addMarathon')
                         .then(res => {
                             const marathonData = res.data;
                             const filterdData = marathonData.filter(d => d.Email == user.email)
@@ -40,7 +40,7 @@ const MyMarathonList = () => {
                                   }).then((result) => {
                                     if (result.isConfirmed) {
                       
-                                      fetch(`http://localhost:5000/addMarathon/${id}`,{
+                                      fetch(`https://marathon-pro-server.vercel.app/addMarathon/${id}`,{
                                           method : 'DELETE'
                                       })
                       

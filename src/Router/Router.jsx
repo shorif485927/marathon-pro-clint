@@ -72,22 +72,22 @@ import ErrorPage from "../Pages/ErrorPage";
           element  :  <PrivateRoute>
             <MarathonCardDetails></MarathonCardDetails>
           </PrivateRoute> ,
-          loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
+          loader : ({params}) => fetch(`https://marathon-pro-server.vercel.app/addMarathon/${params.id}`)
         },
         {
            path : '/registerMarathonForm/:id',
            element : <RegisterMarathonForm></RegisterMarathonForm>,
-           loader : ({params}) => fetch(`http://localhost:5000/addMarathon/${params.id}`)
+           loader : ({params}) => fetch(`https://marathon-pro-server.vercel.app/addMarathon/${params.id}`)
         },
         {
           path : '/updateMyApplyData/:id',
           element : <UpdateMyApplyData></UpdateMyApplyData>,
-           loader : ({params}) => fetch(`http://localhost:5000/marathonRegisterForm/${params.id}`)
+           loader : ({params}) => fetch(`https://marathon-pro-server.vercel.app/marathonRegisterForm/${params.id}`)
          },
           {
             path : '/updateMyMarathon/:id',
             element : <UpdateMyMarathon></UpdateMyMarathon>,
-            loader : ({params}) =>fetch(`http://localhost:5000/addMarathon/${params.id}`)
+            loader : ({params}) =>fetch(`https://marathon-pro-server.vercel.app/addMarathon/${params.id}`)
           }
 
 

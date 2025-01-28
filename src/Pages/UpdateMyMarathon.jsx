@@ -26,7 +26,7 @@ const UpdateMyMarathon = () => {
          const formData = new FormData(e.target);
          const updatedData = Object.fromEntries(formData.entries());
     
-         axios.patch(`http://localhost:5000/addMarathon/${loadedData._id}`,updatedData)
+         axios.patch(`https://marathon-pro-server.vercel.app/addMarathon/${loadedData._id}`,updatedData)
          .then(res => {
                if(res.data.modifiedCount > 0){
                                  toast.success('data updated succesfully')

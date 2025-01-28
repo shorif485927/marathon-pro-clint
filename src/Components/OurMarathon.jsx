@@ -12,7 +12,7 @@ const OurMarathon = () => {
 
      useEffect(() => {
         
-        axios('http://localhost:5000/addMarathon')
+        axios('https://marathon-pro-server.vercel.app/addMarathon')
         .then(res => {
             
              const  data =  res.data;

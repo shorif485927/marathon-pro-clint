@@ -34,8 +34,8 @@ const Banner = () => {
                        <img src={img1} className='w-full h-[400px]'  alt="" />
 
                        <div className="banner_cnt absolute ml-20 ">
-                          {/* <h1 className='text-5xl font-extrabold  common_color'>Step Into Speed Stride </h1>
-                          <h1  className='text-5xl font-extrabold  common_color mt-2'>Towards Success</h1> */}
+                          <h1 className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color'>Step Into Speed Stride </h1>
+                          <h1  className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color mt-2'>Towards Success</h1>
                        </div>
 
             </div>
@@ -46,8 +46,8 @@ const Banner = () => {
             <div className="flex  items-center relative">
                        <img src={img2}  className='w-full h-[400px]' alt="" />
                        <div className="banner_cnt absolute ml-20 ">
-                          {/* <h1 className='text-5xl font-extrabold  common_color'> Inspiring Runners and </h1>
-                          <h1  className='text-5xl font-extrabold  common_color mt-2'>   Creating Connections</h1> */}
+                          <h1 className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color'> Inspiring Runners and </h1>
+                          <h1  className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color mt-2'>   Creating Connections</h1>
                        </div>
 
             </div>
@@ -58,8 +58,8 @@ const Banner = () => {
                        <img src={img3}  className='w-full h-[400px]' alt="" />
 
                        <div className="banner_cnt absolute ml-20 ">
-                          {/* <h1 className='text-5xl font-extrabold  common_color'>Programs That Turn Goals </h1>
-                          <h1  className='text-5xl font-extrabold  common_color mt-4'>into Achievements</h1> */}
+                          <h1 className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color'>Programs That Turn Goals </h1>
+                          <h1  className=' text-lg  md:text-2xl lg:text-5xl  font-extrabold  common_color mt-4'>into Achievements</h1>
                        </div>
 
             </div>

@@ -46,13 +46,13 @@ const AuthProvider = ({children}) => {
             //   post  jwt token 
              if(currentUser?.email) {
                   const user = {   email : currentUser.email}
-                  axios.post('http://localhost:5000/jwt', user, {withCredentials : true})
+                  axios.post('https://marathon-pro-server.vercel.app/jwt', user, {withCredentials : true})
                   .then(res => {
      
                      
                   })
              } else{
-                   axios.post('http://localhost:5000/logout', {}, {withCredentials : true})
+                   axios.post('https://marathon-pro-server.vercel.app/logout', {}, {withCredentials : true})
                    .then(res => {
                
                      

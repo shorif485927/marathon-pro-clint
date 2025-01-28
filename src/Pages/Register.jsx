@@ -30,7 +30,7 @@ const Register = () => {
          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
 
          if(!passwordRegex.test(password)){
-           setError(' password must be at least one Uppercase, One LowerCase, One Number and Password should be in 6 Character Longer');
+           setError('password must be at least one Uppercase, One LowerCase, One Number and Password should be in 6 Character Longer');
  
            return;
         }
@@ -84,7 +84,7 @@ const Register = () => {
                <div className='relative'>
                <label className="fieldset-label">Password</label>
                 <input type={showPassword ? 'text' : 'password'}  name='password' className="input " placeholder="Password" />
-                <button  onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-3 top-7'> {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>} </button>
+                <div  onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-3 top-7'> {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>} </div>
                </div>
 
 

@@ -26,7 +26,7 @@ const RegisterMarathonForm = () => {
              const getMarathonRegisterFormData = Object.fromEntries(formData.entries())
 
 
-              axios.post('http://localhost:5000/marathonRegisterForm', getMarathonRegisterFormData)
+              axios.post('https://marathon-pro-server.vercel.app/marathonRegisterForm', getMarathonRegisterFormData)
               .then(res => {
                     const data = res.data;
 

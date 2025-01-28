@@ -9,17 +9,20 @@ import AuthContext from '../Context/AuthContext';
 
 const MyApplyList = () => {
     const {user} = useContext(AuthContext)
-    const [AppliedMarathons , setAppliedMarathons] = useState([])
-    const [searchQuery , setSearchQuery] = useState('')
+    const [AppliedMarathons , setAppliedMarathons] = useState([]);
+    console.log(AppliedMarathons);
+    
+    
   
     
 useEffect(() => {
-                    axios.get('http://localhost:5000/marathonRegisterForm',{withCredentials : true})
+                    axios.get('https://marathon-pro-server.vercel.app/marathonRegisterForm', {withCredentials : true})
                     .then(res => {
                              const  data = res.data;
                              const filterdData = data.filter(d => d.email == user.email);
                              setAppliedMarathons(filterdData)
                     })
+                    .catch(err => console.log(err))
           },[])
 
         //   
@@ -35,7 +38,7 @@ useEffect(() => {
               }).then((result) => {
                 if (result.isConfirmed) {
   
-                  fetch(`http://localhost:5000/marathonRegisterForm/${id}`,{
+                  fetch(`https://marathon-pro-server.vercel.app/marathonRegisterForm/${id}`,{
                       method : 'DELETE'
                   })
   
@@ -67,7 +70,7 @@ useEffect(() => {
         <div>
                        <main className='relative'>
                                   <div className="search absolute  right-0 -top-10 ">
-                                  <input type="text" placeholder="Search by title" className="input" onChange={(e) => setSearchQuery(e.target.value) } />
+                                  <input type="text" placeholder="Search by title" className="input"   />
                                   </div>
                        <div className="overflow-x-auto">
   <table className="table">

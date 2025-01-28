@@ -62,7 +62,7 @@ const LogIn = () => {
                     <div className='relative'>
                     <label className="fieldset-label">Password</label>
                      <input type={showPassword ? 'text' : 'password'}  name='password' className="input " placeholder="Password" />
-                     <button  onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-3 top-7'> {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>} </button>
+                     <div  onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-3 top-7'> {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>} </d>
                     </div>
      
                      
