@@ -12,7 +12,7 @@ const RegisterMarathonForm = () => {
               const navigate = useNavigate();
               const {setTotalRegistration} = useContext(AuthContext)
               const loadedData = useLoaderData();
-              console.log(loadedData);
+
               
               const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
 
@@ -29,7 +29,6 @@ const RegisterMarathonForm = () => {
               axios.post('http://localhost:5000/marathonRegisterForm', getMarathonRegisterFormData)
               .then(res => {
                     const data = res.data;
-                    console.log(data);
 
                     if(data.insertedId){
                         toast.success('Register succesfully')

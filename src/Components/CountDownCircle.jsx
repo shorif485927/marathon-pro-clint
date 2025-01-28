@@ -22,7 +22,7 @@ const CountDownCircle = ({marathonStartDate}) => {
 
     return (
       <div className="flex flex-col items-center">
-        <div className="text-2xl font-bold">Countdown</div>
+        <div className="text-md font-bold">Marathon Starts in</div>
         <div className="text-lg">
           {days}d {hours}h {minutes}m
         </div>

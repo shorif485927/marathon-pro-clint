@@ -15,13 +15,14 @@ import RegisterMarathonForm from "../Pages/RegisterMarathonForm";
 import UpdateMyApplyData from "../Pages/UpdateMyApplyData";
 import UpdateMyMarathon from "../Pages/UpdateMyMarathon";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 
   const router = createBrowserRouter([
     {
       path: "/",
-      errorElement : <h1>error</h1>,
+      errorElement : <ErrorPage></ErrorPage>,
       element: <MainLayout></MainLayout>,
       children : [
         {

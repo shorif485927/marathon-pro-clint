@@ -9,16 +9,16 @@ import AuthContext from '../Context/AuthContext';
 
 const MyApplyList = () => {
     const {user} = useContext(AuthContext)
-    const [myApplyData , setMyApplyData] = useState([])
-
-    //   console.log(myApplyData);
-    //   const {_id,title,registrationStart,registrationEnd , marathonStart , location , description , photourl}  = loadedData;
+    const [AppliedMarathons , setAppliedMarathons] = useState([])
+    const [searchQuery , setSearchQuery] = useState('')
+  
+    
 useEffect(() => {
                     axios.get('http://localhost:5000/marathonRegisterForm',{withCredentials : true})
                     .then(res => {
                              const  data = res.data;
                              const filterdData = data.filter(d => d.email == user.email);
-                             setMyApplyData(filterdData)
+                             setAppliedMarathons(filterdData)
                     })
           },[])
 
@@ -50,8 +50,8 @@ useEffect(() => {
                     icon: "success"
                   });
                           }
-                            const deletedData = myApplyData.filter(d => d._id !== id);
-                            setMyApplyData(deletedData)
+                            const deletedData = AppliedMarathons.filter(d => d._id !== id);
+                            setAppliedMarathons(deletedData)
                     
                           
                       })
@@ -67,7 +67,7 @@ useEffect(() => {
         <div>
                        <main className='relative'>
                                   <div className="search absolute  right-0 -top-10 ">
-                                  <input type="text" placeholder="Search by title" className="input" />
+                                  <input type="text" placeholder="Search by title" className="input" onChange={(e) => setSearchQuery(e.target.value) } />
                                   </div>
                        <div className="overflow-x-auto">
   <table className="table">
@@ -86,7 +86,7 @@ useEffect(() => {
     <tbody>
 
         {
-            myApplyData.map((data,index)  => 
+            AppliedMarathons.map((data,index)  => 
                 <tr className="bg-base-200" key={data._id}>
                 <th> {index + 1} </th>
                 <td> {data.firstName}</td>

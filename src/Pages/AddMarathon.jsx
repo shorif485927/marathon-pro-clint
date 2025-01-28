@@ -23,20 +23,18 @@ const AddMarathon = () => {
     newMarathonData.Email = user.email;
     newMarathonData.RegistrationDate = createdAt
 
-     console.log(newMarathonData);
+
 
      axios.post('http://localhost:5000/addMarathon',newMarathonData)
      .then(res => {
-      console.log(res.data);
+   
         if(res.data.insertedId){
            toast.success('Data submit succesfully')
             navigate('/')
         }
       
      })
-    //  .catch(err => toast.error('something is wrong'))
-    //  .catch(err => console.log(err)
-    //  )
+
      
 
 

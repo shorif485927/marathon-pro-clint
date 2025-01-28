@@ -22,7 +22,7 @@ const Register = () => {
         const email = formData.email.value;
         const password = formData.password.value;
 
-         console.log(name, photourl,email, password);
+
          
          setError('');
          setSuccess(false)
@@ -47,22 +47,12 @@ const Register = () => {
                  toast.success('registration succesfully',{
             autoClose: 3000,})
  
-            // updateUserProfile({
-            //  displayName : username, photoURL : photoURL
-            // })
-            // .then(() => {
-            //   navigate('/')
-            //      toast.success('registration succesfully',{
-            // autoClose: 3000,
- 
-            //  })
-            // })
             
          })
          .catch(err => {
-           console.log(err);
+        
            
-           toast.error(err.code);
+           toast.error(err);
            setSuccess(false)
          }
          )

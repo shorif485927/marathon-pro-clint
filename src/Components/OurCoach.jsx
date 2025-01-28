@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const OurCoach = () => {
              const [coach, setCoach] = useState([])
-               console.log(coach);
+
                
 
              useEffect(() => {

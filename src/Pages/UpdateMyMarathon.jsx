@@ -34,10 +34,7 @@ const UpdateMyMarathon = () => {
                              }
                     
          })
-         .catch(err => {
-            console.log(err);
-            
-         })
+      
          
      }
 

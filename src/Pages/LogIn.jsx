@@ -32,7 +32,7 @@ const LogIn = () => {
                                  autoClose: 3000,})
                  })
                  .catch(err => {
-                    console.log(err);
+             
                     
                     toast.error('log in faild')
                   

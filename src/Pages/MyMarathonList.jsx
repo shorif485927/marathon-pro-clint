@@ -24,7 +24,7 @@ const MyMarathonList = () => {
                             const filterdData = marathonData.filter(d => d.Email == user.email)
                             setMyMarathonData(filterdData)
                         })
-                        .catch(err => console.log(err))},[])
+                        },[])
            
                
                   const handleDelete = id => {

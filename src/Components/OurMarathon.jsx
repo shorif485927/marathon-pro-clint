@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const OurMarathon = () => {
 
      const [marathonsCard , setMarathonCards] = useState([])
-     console.log(marathonsCard);
+
      
      const {title,registrationStart,registrationEnd , marathonStart , location , description , photourl,RegistrationData}  = marathonsCard
 

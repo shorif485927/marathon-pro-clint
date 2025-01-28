@@ -25,17 +25,14 @@ const UpdateMyApplyData = () => {
 
             axios.patch(`http://localhost:5000/marathonRegisterForm/${loadedData?._id}`,updatedData)
             .then(res => {
-                  console.log(res.data);
+     
                   if(res.data.modifiedCount > 0){
                       toast.success('data updated succesfully')
                       navigate('/dashboard/myApplyList')
                   }
                   
             })
-            .catch(err => {
-                console.log(err);
-                
-            })
+       
 
       }
 
